@@ -1,24 +1,46 @@
-# Keil MDK build outputs
+# === Keil MDK build outputs ===
 Objects/
 Listings/
 
-# User-specific Keil GUI layout files
+# === User-specific Keil GUI layout ===
 *.uvguix.*
 
-# Backup files
-*.bak
-*.dep
+# === Compilation中间文件 ===
+*.o          # 编译生成的目标文件
+*.d          # 依赖文件
+*.crf        # 交叉引用文件
+*.elf        # ELF 可执行文件
+*.hex        # 可选：Hex 烧录文件（如果要保留发布版本就去掉）
+*.bin        # 可选：Bin 烧录文件
+*.map        # 内存映射文件
+*.lst        # 汇编列表文件
+*.axf        # ARM 可执行文件
 
-# JLink/other debugger logs
+# === 编辑器/IDE ===
+*.scvd       # Keil 查看器配置
+*.uvguix.*   # Keil 用户界面配置
+*.swp        # Vim
+*.swo        # Vim
+.vscode/     # 如果不用 VS Code 可以忽略
+.idea/       # JetBrains
+
+# === 调试器日志 ===
 *.jlink
 JLinkLog.txt
+*.log
 
-# OS generated files
+# === 备份与临时文件 ===
+*.bak
+*.dep
+*.tmp
+*~
+
+# === 操作系统 ===
 Thumbs.db
 Desktop.ini
 .DS_Store
 
-# Archive files
+# === 压缩包（不要把 .zip/.rar 传上仓库） ===
 *.rar
 *.zip
 *.7z
